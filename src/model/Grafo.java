@@ -31,7 +31,7 @@ public class Grafo<T> {
 		return builder.toString();
 	}
 
-	public ArrayList<String> ligacao(String index, ArrayList<String> pais) {
+	public ArrayList<String> getLigacao(String index, ArrayList<String> pais) {
 		ArrayList<String> lista = new ArrayList<>();
 		for(int i = 0; i < this.labels.length; i++) {
 			if (this.labels[i] == index) {

@@ -22,24 +22,24 @@ public class ArvoreController {
 				}
 			}
 		}
-		System.out.println("""
-B
-  A
-    D
-      G
-    F
-      H
-      K
-        L
-  C
-    I
-    J
-      N
-        O
-        M
-      E
--------------------------------------------------
-				""");
+//		System.out.println("""
+//B
+//  A
+//    D
+//      G
+//    F
+//      H
+//      K
+//        L
+//  C
+//    I
+//    J
+//      N
+//        O
+//        M
+//      E
+//-------------------------------------------------
+//				""");
 		System.out.println(arvore.toString());
 	}
 }
