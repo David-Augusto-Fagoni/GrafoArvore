@@ -3,6 +3,7 @@ package view;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import controller.ArvoreController;
 import controller.GrafoController;
 import model.Grafo;
 
@@ -33,10 +34,15 @@ public class Principal {
 		g.link("K", "L");
 		g.link("L", "M");
 		GrafoController c = new GrafoController();
+		ArvoreController a = new ArvoreController();
+		String raiz = "B";
 		HashMap<String, ArrayList<String>> mapa = new HashMap<>();
 		ArrayList<String> pais = new ArrayList<>();
-		pais.add("B");
+		pais.add(raiz);
 		c.acharCaminho(g, pais, mapa);
+		//System.out.println(mapa+" - saida");
+		//System.out.println("{A=[B], B=[], C=[B], D=[B, A], E=[B, C, J], F=[B, A], G=[B, A, D], H=[B, A, F], I=[B, C], J=[B, C], K=[B, A, F], L=[B, A, F, K], M=[B, C, J, N], N=[B, C, J], O=[B, C, J, N]} - esperado");
+		a.criarArvore(mapa,raiz);
 	}
 
 }
