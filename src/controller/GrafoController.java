@@ -33,33 +33,4 @@ public class GrafoController {
 		}
 	}
 
-//	METODO COM RETORNO
-//	public HashMap<String, ArrayList<String>> acharCaminho(Grafo<?> g,ArrayList<String> pais) {
-//		HashMap<String, ArrayList<String>> mapa = new HashMap<String, ArrayList<String>>();
-//		String letra = pais.getLast();
-//		int vizinhos = g.getLigacao(letra, pais).size();
-//		for(int j=0; j<vizinhos;j++) {
-//			pais.add(g.getLigacao(letra, pais).get(j));
-//			mapSort(mapa,acharCaminho(g, pais));
-//		}
-//		pais.removeLast();
-//		mapSort(mapa, letra, pais);
-//		//System.out.println(mapa.toString());
-//		return mapa;
-//		
-//	}
-//
-//	
-//	private HashMap<String, ArrayList<String>> mapSort (HashMap<String, ArrayList<String>> mapa1, HashMap<String, ArrayList<String>> mapa2) {
-//		for(String j : mapa2.keySet()) {
-//			if(mapa1.containsKey(j)) {
-//				mapSort(mapa1, j, mapa2.get(j));
-//			}else {
-//				mapa1.put(j, mapa2.get(j));
-//			}
-//		}
-//		
-//		return mapa1;
-//		
-//	}
 }

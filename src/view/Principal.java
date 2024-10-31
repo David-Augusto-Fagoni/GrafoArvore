@@ -43,8 +43,6 @@ public class Principal {
 		c.acharCaminho(g, pais, mapa);
 		System.out.println("{A=[B], B=[], C=[B], D=[B, A], E=[B, C, J], F=[B, A], G=[B, A, D], H=[B, A, F], I=[B, C], J=[B, C], K=[B, A, F], L=[B, A, F, K], M=[B, C, J, N], N=[B, C, J], O=[B, C, J, N]} - esperado");
 		System.out.println(mapa+" - saida");
-//		pais.add(raiz);
-//		System.out.println(c.acharCaminho(g, pais)+" - saida2");
 		a.criarArvore(mapa,raiz);
 	}
 
