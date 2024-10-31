@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import model.Grafo;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
  
 public class Grafo<T> {
 	private int [] [] matriz;
@@ -30,7 +32,6 @@ public class Grafo<T> {
 		}
 		return builder.toString();
 	}
-
 	public ArrayList<String> getLigacao(String index, ArrayList<String> pais) {
 		ArrayList<String> lista = new ArrayList<>();
 		for(int i = 0; i < this.labels.length; i++) {
@@ -43,5 +44,13 @@ public class Grafo<T> {
 			}
 		}
 		return lista;
+	}
+	public Set<String> keySet() {
+		Set<String> chaves = new HashSet<>();
+		for(int i = 0; i < this.labels.length; i++) {
+			chaves.add(this.labels[i]);
+		}
+		return chaves;
+		
 	}
 }

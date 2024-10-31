@@ -1,3 +1,4 @@
+
 package view;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		String[] router = new String[] {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"};
-		Grafo<?> g = new Grafo<>(router);
+		Grafo<String> g = new Grafo<>(router);
 		g.link("B", "A");
 		g.link("B", "C");
 		g.link("A", "D");
@@ -40,8 +41,10 @@ public class Principal {
 		ArrayList<String> pais = new ArrayList<>();
 		pais.add(raiz);
 		c.acharCaminho(g, pais, mapa);
-		//System.out.println(mapa+" - saida");
-		//System.out.println("{A=[B], B=[], C=[B], D=[B, A], E=[B, C, J], F=[B, A], G=[B, A, D], H=[B, A, F], I=[B, C], J=[B, C], K=[B, A, F], L=[B, A, F, K], M=[B, C, J, N], N=[B, C, J], O=[B, C, J, N]} - esperado");
+		System.out.println("{A=[B], B=[], C=[B], D=[B, A], E=[B, C, J], F=[B, A], G=[B, A, D], H=[B, A, F], I=[B, C], J=[B, C], K=[B, A, F], L=[B, A, F, K], M=[B, C, J, N], N=[B, C, J], O=[B, C, J, N]} - esperado");
+		System.out.println(mapa+" - saida");
+//		pais.add(raiz);
+//		System.out.println(c.acharCaminho(g, pais)+" - saida2");
 		a.criarArvore(mapa,raiz);
 	}
 
